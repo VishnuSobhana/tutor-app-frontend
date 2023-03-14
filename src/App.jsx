@@ -8,7 +8,7 @@ import EditCourse from "./pages/EditCourse/EditCourse";
 import Home from "./pages/Home/Home";
 import Error from "./pages/Error/Error";
 import Signup from "./pages/Signup/Signup";
-import Login from "./pages/Login/login";
+import Login from "./pages/Login/Login";
 import ProtectedRoute from "./pages/Navigation/protectedRoute";
 import IsLoggedOut from "./pages/Navigation/isLoggedOut";
 import Teachers from "./pages/Teachers/Teachers";
