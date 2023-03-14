@@ -10,6 +10,8 @@ body{
   padding: 0 auto
 }
 
+
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -19,7 +21,9 @@ body{
 
 
 
-.nav{
+
+
+/* .nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -36,7 +40,7 @@ body{
   margin: 1rem auto;
   padding: 1rem auto;
   list-style: none;
-}
+} */
 
 /* ul li{
   display: flex;

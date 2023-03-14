@@ -12,24 +12,12 @@ const myApi = axios.create({
 
 // Teachers :
 
-myApi.createTeacher = (teacher) => {
-  return myApi.post("/", teacher);
-};
-
 myApi.getAllTeachers = (queryString) => {
   return myApi.get(`/teachers?${queryString}`);
 };
 
 myApi.getOneTeacher = (id) => {
   return myApi.get(`/teachers/${id}`);
-};
-
-myApi.deleteTeacher = (id) => {
-  return myApi.delete(`/teachers/${id}`);
-};
-
-myApi.updateTeacher = (id, teacher) => {
-  return myApi.patch(`/teachers/${id}`, teacher);
 };
 
 //Courses :
