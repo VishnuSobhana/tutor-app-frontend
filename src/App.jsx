@@ -21,12 +21,12 @@ function App() {
       <Routes>
         <Route element={<Navbar />}>
           <Route path="/" element={<Home />} />
-          <Route path="/teachers" element={<Teachers />} />
-          <Route path="/teacher/:teacherId" element={<Teacher />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/course/:courseId" element={<Course />} />
 
           <Route element={<ProtectedRoute />}>
+            <Route path="/teachers" element={<Teachers />} />
+            <Route path="/teacher/:teacherId" element={<Teacher />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/course/:courseId" element={<Course />} />
             <Route path="/course/new" element={<AddCourse />} />
             <Route path="/course/:courseID/edit" element={<EditCourse />} />
             <Route path="/profile" element={<Profile />} />
