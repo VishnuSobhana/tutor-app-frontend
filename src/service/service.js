@@ -4,15 +4,11 @@ import axios from "axios";
 
 // Backend is running on http://localhost:5005
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5005";
 
 const myApi = axios.create({
   baseURL: BACKEND_URL,
 });
-
-
 
 // Teachers :
 
@@ -26,10 +22,10 @@ myApi.getOneTeacher = (id) => {
 
 //Courses :
 myApi.interceptors.request.use((request) => {
-  const token = localStorage.getItem("token")
-  request.headers.Authorization = token ? `Bearer ${token}` : null
-  return request
-})
+  const token = localStorage.getItem("token");
+  request.headers.Authorization = token ? `Bearer ${token}` : null;
+  return request;
+});
 
 myApi.createCourse = (course) => {
   return myApi.post("/", course);
