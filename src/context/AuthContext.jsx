@@ -2,10 +2,12 @@ import { createContext, useState, useEffect } from "react";
 import myApi from "./../service/service";
 export const AuthContext = createContext();
 
+
 function AuthContextWrapper(props) {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
 
   function storeToken(receivedToken) {
     localStorage.setItem("token", receivedToken);
@@ -14,6 +16,7 @@ function AuthContextWrapper(props) {
 
   function getToken() {
     return localStorage.getItem("token");
+
   }
 
   function removeToken() {
@@ -39,7 +42,7 @@ function AuthContextWrapper(props) {
         setIsLoading(false);
       }
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error);
       setUser(null);
       setIsLoading(false);
     }
@@ -57,5 +60,6 @@ function AuthContextWrapper(props) {
     </AuthContext.Provider>
   );
 }
+
 
 export default AuthContextWrapper;

@@ -10,7 +10,7 @@ const Courses = () => {
         subject: "",
         teacher: "",
     });
-
+    const [courses, setCourses] = useState([])
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({
         Maths: false,

@@ -10,6 +10,7 @@ const Signup = () => {
     const [city, setCity] = useState('');
     const [isTeacher, setIsTeacher] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const navigate = useNavigate()
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -24,13 +25,14 @@ const Signup = () => {
 
         } catch (error) {
             console.log(error)
+            setError(error.response.data.message)
         }
 
     }
     return (
         <>
             <div className="form">
-                <h2>Sign up</h2>
+                <h1>Sign up</h1>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="username">Username:</label>
                     <input onChange={(event) => setUsername(event.target.value)} value={username} type="text" id="username" name="username" />

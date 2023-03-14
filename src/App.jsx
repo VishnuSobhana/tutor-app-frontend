@@ -1,5 +1,4 @@
 import "./App.css";
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Courses from "./pages/Courses/Courses";
@@ -12,9 +11,9 @@ import Signup from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
 import ProtectedRoute from "./pages/Navigation/protectedRoute";
 import IsLoggedOut from "./pages/Navigation/isLoggedOut";
-import Teachers from "./pages/Teachers/teachers";
+import Teachers from "./pages/Teachers/Teachers";
 import Teacher from "./pages/Teacher/Teacher";
-import Profile from "./pages/Profile/profile";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
