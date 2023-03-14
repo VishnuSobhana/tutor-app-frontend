@@ -17,5 +17,3 @@ function IsLoggedOut() {
 }
 
 export default IsLoggedOut;
-
-export default IsLoggedOut

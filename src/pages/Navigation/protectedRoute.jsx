@@ -15,5 +15,3 @@ function ProtectedRoute() {
 }
 
 export default ProtectedRoute;
-
-export default ProtectedRoute
