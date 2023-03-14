@@ -1,37 +1,48 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
-const NavBar = () => {
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { AuthContext } from '../../context/AuthContext';
 
+// import { Navbar, Nav } from 'react-bootstrap';
+const NavBar = () => {
+    // const { user, authenticateUser, removeToken } = useContext(AuthContext)
+    // const handleClick = () => {
+    //     removeToken()
+    //     authenticateUser()
+    // }
     return (
-        <nav className='nav'>
-            <div className='navDiv'>
-                <Link to="/">Home</Link>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <Link to="/teachers">Teachers</Link>
-                    </li>
-                    <li>
-                        <Link to="/courses">Courses</Link>
-                    </li>
-                    <li>
-                        <Link to="/profile">Profile</Link>
-                    </li>
-                    <li>
-                        <Link to="/logout">Log Out</Link>
-                    </li>
-                    <li>
-                        <Link to="/signup">Sign up</Link>
-                    </li>
-                    <li>
-                        <Link to="/login">Login</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    )
+        <>
+            <Navbar bg="dark" variant="dark">
+                <Container>
+
+                    <Nav className="me-auto">
+
+
+                        <NavLink to="/">Home</NavLink>
+
+                        <NavLink to="/courses">Courses</NavLink>
+
+                        <NavLink to="/profile">Profile</NavLink>
+                        <NavLink to="/teachers">Teachers</NavLink>
+
+                        <NavLink to="/signup">Sign up</NavLink>
+                        <NavLink to="/login">Log In</NavLink>
+
+                        <NavLink to="/logout">Log Out</NavLink>
+
+                    </Nav>
+                </Container>
+            </Navbar>
+            <main>
+                <Outlet />
+            </main>
+        </>
+    );
 }
+
+
 
 export default NavBar
