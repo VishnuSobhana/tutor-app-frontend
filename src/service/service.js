@@ -20,6 +20,10 @@ myApi.getOneTeacher = (id) => {
   return myApi.get(`/teachers/${id}`);
 };
 
+myApi.favoriteTeachers = (id) => {
+  return myApi.post(`/favorite-teacher/${id}/add`);
+}
+
 //Courses :
 myApi.interceptors.request.use((request) => {
   const token = localStorage.getItem("token");
@@ -42,6 +46,10 @@ myApi.getOneCourse = (id) => {
 myApi.deleteCourse = (id) => {
   return myApi.delete(`/courses/${id}`);
 };
+
+myApi.favoriteCourses = (id) => {
+  return myApi.post(`/favorite-courses/${id}/add`);
+}
 
 myApi.updateCourse = (id, course) => {
   return myApi.patch(`/courses/${id}`, course);
