@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.jsx";
+import Navbar from "./components/NavBar/NavBar";
 import Courses from "./pages/Courses/Courses";
 import Course from "./pages/Course/Course";
 import AddCourse from "./pages/AddCourse/AddCourse";
