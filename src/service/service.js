@@ -6,9 +6,13 @@ import axios from "axios";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
+
+
 const myApi = axios.create({
   baseURL: BACKEND_URL,
 });
+
+
 
 // Teachers :
 
@@ -21,6 +25,11 @@ myApi.getOneTeacher = (id) => {
 };
 
 //Courses :
+myApi.interceptors.request.use((request) => {
+  const token = localStorage.getItem("token")
+  request.headers.Authorization = token ? `Bearer ${token}` : null
+  return request
+})
 
 myApi.createCourse = (course) => {
   return myApi.post("/", course);

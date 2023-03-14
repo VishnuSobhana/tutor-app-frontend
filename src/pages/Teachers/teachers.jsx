@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import myApi from "./../../service/service";
+import myApi from "../../service/service";
 import TeacherCard from "../../components/TeacherCard/TeacherCard";
 import List from "../../components/List/List";
 
