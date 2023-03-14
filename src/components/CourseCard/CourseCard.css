@@ -1,0 +1,11 @@
+.TeacherCard {
+  max-width: 20rem;
+  padding: 1rem;
+  outline: 1px solid #f9f9f9;
+  transition: all 200ms ease-in-out;
+}
+
+.TeacherCard.light {
+  background-color: whitesmoke;
+  color: black;
+}

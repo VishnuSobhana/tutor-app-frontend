@@ -1,6 +1,7 @@
-import React from "react";
-import { List } from "reactstrap";
-import myApi from "../../service/service";
+import React, { useState, useEffect } from "react";
+import myApi from "./../../service/service";
+import CourseCard from "../../components/CourseCard/CourseCard";
+import List from "../../components/List/List";
 
 const Courses = () => {
     const [course, setCourse] = useState({
@@ -9,6 +10,7 @@ const Courses = () => {
         subject: "",
         teacher: "",
     });
+
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({
         Maths: false,
@@ -19,6 +21,7 @@ const Courses = () => {
         Chemistry: false,
         Biology: false,
     });
+
     useEffect(() => {
         let queryString = "";
         if (query) {
@@ -29,16 +32,19 @@ const Courses = () => {
                 queryString += `&subject=${key}`;
             }
         }
+
         myApi
             .getAllCourses(queryString)
             .then((res) => setCourses(res.data))
             .catch((e) => console.error(e));
     }, [query, filters]);
+
     const handleCheckBox = (event) => {
         setFilters((current) => {
             return { ...current, [event.target.name]: event.target.checked };
         });
     };
+
     return (
         <div>
             <div>
@@ -126,4 +132,5 @@ const Courses = () => {
         </div>
     );
 };
+
 export default Courses;

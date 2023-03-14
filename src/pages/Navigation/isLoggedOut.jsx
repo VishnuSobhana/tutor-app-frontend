@@ -1,18 +1,21 @@
-import React, { useContext } from 'react'
-import { Navigate, Outlet } from 'react-router'
-import { AuthContext } from '../../context/AuthContext'
+import { useContext } from "react";
+import { AuthContext } from "./../../context/AuthContext";
+import { Navigate, Outlet } from "react-router-dom";
 
-const IsLoggedOut = () => {
-    const { isLoading, user } = useContext(AuthContext)
+function IsLoggedOut() {
+    const { isLoading, user } = useContext(AuthContext);
 
     if (isLoading) {
-        return <p>Loading please...</p>
+        return <p>Loading...</p>;
     }
 
     if (user) {
-        return <Navigate to="/" />
+        return <Navigate to="/" />;
     }
-    return <Outlet />
+
+    return <Outlet />;
 }
+
+export default IsLoggedOut;
 
 export default IsLoggedOut
