@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import "./CourseCard.css";
 
 const CourseCard = ({ _id, title, description, subject }) => {
-  // const { theme, setTheme } = useContext(ThemeContext)
-  //const { theme, setTheme } = useTheme();
 
   return (
     <div className={`CourseCard`} key={_id}>

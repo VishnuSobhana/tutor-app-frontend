@@ -1,5 +1,6 @@
 import myApi from "../../service/service";
 import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router";
 
 const AddCourse = () => {
   const [title, setTitle] = useState("");
@@ -62,8 +63,8 @@ const AddCourse = () => {
           </option>
           <option value="Maths">Math</option>
           <option value="Physics">Physics</option>
-          <option value="Computer_Science">Computer_Science</option>
-          <option value="Physical_Education">Physical_Education</option>
+          <option value="Computer_Science">Computer Science</option>
+          <option value="Physical_Education">Physical Education</option>
           <option value="History">History</option>
           <option value="Chemistry">Chemistry</option>
           <option value="Biology">Biology</option>

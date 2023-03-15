@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import myApi from "../../service/service";
 import TeacherCard from "../../components/TeacherCard/TeacherCard";
 import List from "../../components/List/List";
+import "../../components/TeacherCard/TeacherCard.css"
 
 const Teachers = () => {
   const [teachers, setTeachers] = useState([]);
@@ -12,6 +13,8 @@ const Teachers = () => {
     if (query) {
       queryString = `city=${query}`;
     }
+
+
 
     myApi
       .getAllTeachers(queryString)
@@ -26,7 +29,7 @@ const Teachers = () => {
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search city"
+          placeholder="Search city" className="search"
         />
       </div>
       <List array={teachers} MyComponent={TeacherCard} />
