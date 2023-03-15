@@ -22,7 +22,7 @@ myApi.getOneTeacher = (id) => {
 
 myApi.favoriteTeachers = (id) => {
   return myApi.post(`/favorite-teacher/${id}/add`);
-}
+};
 
 //Courses :
 myApi.interceptors.request.use((request) => {
@@ -32,7 +32,7 @@ myApi.interceptors.request.use((request) => {
 });
 
 myApi.createCourse = (course) => {
-  return myApi.post("/", course);
+  return myApi.post("/courses/add", course);
 };
 
 myApi.getAllCourses = (queryString) => {
@@ -49,9 +49,10 @@ myApi.deleteCourse = (id) => {
 
 myApi.favoriteCourses = (id) => {
   return myApi.post(`/favorite-courses/${id}/add`);
-}
+};
 
 myApi.updateCourse = (id, course) => {
+  // console.log("id in api", id);
   return myApi.patch(`/courses/${id}`, course);
 };
 

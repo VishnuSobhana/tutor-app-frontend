@@ -10,6 +10,8 @@ const EditCourse = () => {
   const params = useParams();
   const navigate = useNavigate();
 
+  console.log(params);
+
   useEffect(() => {
     myApi
       .getOneCourse(params.courseId)
@@ -31,7 +33,6 @@ const EditCourse = () => {
         params.courseId,
         courseToUpdate
       );
-
       if (newCourse.status === 202) {
         navigate("/courses");
       }
@@ -43,7 +44,7 @@ const EditCourse = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="course">Update the course:</label>
+      <label htmlFor="title"> title :</label>
       <div>
         <input
           value={title}
@@ -55,6 +56,7 @@ const EditCourse = () => {
         ></input>
       </div>
       <div>
+        <label htmlFor="description"> Description : </label>
         <textarea
           value={description}
           name="description"
@@ -65,17 +67,17 @@ const EditCourse = () => {
         ></textarea>
       </div>
       <div>
-        <label htmlFor="description">: </label>
+        <label htmlFor="subject"> Subject : </label>
         <select
           value={subject}
           name="subject"
           id="subject"
-          onChange={(event) => setCategory(event.target.value)}
+          onChange={(event) => setSubject(event.target.value)}
         >
           <option disabled value="-1">
             Select a subject
           </option>
-          <option value="Maths">Math</option>
+          <option value="Maths">Maths</option>
           <option value="Physics">Physics</option>
           <option value="Computer_Science">Computer_Science</option>
           <option value="Physical_Education">Physical_Education</option>

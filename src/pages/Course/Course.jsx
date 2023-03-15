@@ -39,12 +39,14 @@ const Course = () => {
   }
   return (
     <>
-      <h2>{course.title}</h2>
+      <h2>Title : {course.title}</h2>
+      <h4>Subject : {course.subject}</h4>
+      <h4>Description : </h4>
       <p style={{ whiteSpace: "pre-line" }}>{course.description}</p>
-      <Link to={`/course/${course._id}/edit`}>Edit that course</Link>
-      <button onClick={handleDelete}>Delete course</button>
-      <button onClick={handleFavorite}>Bookmark Course</button>
-      <pre>{JSON.stringify(course, null, 2)}</pre>
+      <Link to={`/course/${course._id}/edit`}>Update this course</Link>
+      <button onClick={handleDelete}>Delete this course</button>
+      <button onClick={handleFavorite}>Bookmark this course</button>
+      {/* <pre>{JSON.stringify(course, null, 2)}</pre> */}
     </>
   );
 };
