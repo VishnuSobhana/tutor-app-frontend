@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import myApi from "../../service/service";
+import './SignupForm.css'
 const Signup = () => {
     const [username, setUsername] = useState("");
     const [bio, setBio] = useState("");
@@ -47,7 +48,7 @@ const Signup = () => {
                         name="username"
                     />
                     <label htmlFor="bio">Bio:</label>
-                    <input
+                    <textarea
                         onChange={(event) => setBio(event.target.value)}
                         value={bio}
                         type="text"
@@ -84,6 +85,7 @@ const Signup = () => {
                         type="checkbox"
                         name="isTeacher"
                         id="isTeacher"
+
                     />
                     <label htmlFor="password">Password</label>
                     <input

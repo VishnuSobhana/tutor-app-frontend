@@ -14,7 +14,8 @@ import IsLoggedOut from "./pages/Navigation/isLoggedOut";
 import Teachers from "./pages/Teachers/Teachers";
 import Teacher from "./pages/Teacher/Teacher";
 import Profile from "./pages/Profile/Profile";
-
+import FavoriteTeachers from "./pages/FavoriteTeachers/FavoriteTeachers";
+import FavoriteCourses from "./pages/FavoriteCourses/FavoriteCourses";
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,9 @@ function App() {
             <Route path="/course/new" element={<AddCourse />} />
             <Route path="/course/:courseId/edit" element={<EditCourse />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/favoriteTeachers" element={<FavoriteTeachers />} />
+            <Route path="/favoriteCourses" element={<FavoriteCourses />} />
+
           </Route>
 
           <Route element={<IsLoggedOut />}>

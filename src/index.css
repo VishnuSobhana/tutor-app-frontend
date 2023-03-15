@@ -14,15 +14,15 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.navbar{
+.navbar {
   /* border: 1px solid red; */
   /* display: flex;
   justify-content: space-between; */
 }
 
-.navbar a{
+.navbar a {
   /* display: flex; */
-  color:aqua ;
+  color: aqua;
   justify-content: space-around;
   margin: 1rem 1rem;
   height: 1.5rem;
@@ -46,7 +46,7 @@ a:hover {
   margin: 0;
   display: flex;
   /* place-items: center; */
-  /* min-width: 320px;
+/* min-width: 320px;
   min-height: 100vh;
 } */
 
@@ -62,7 +62,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: blue;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -81,8 +81,5 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }

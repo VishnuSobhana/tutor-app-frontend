@@ -1,11 +1,15 @@
-.TeacherCard {
+.CourseCard {
   max-width: 20rem;
   padding: 1rem;
   outline: 1px solid #f9f9f9;
   transition: all 200ms ease-in-out;
+  border-radius: 1rem;
 }
 
-.TeacherCard.light {
-  background-color: whitesmoke;
-  color: black;
+input.search{
+  display: flex;
+  margin: 1rem auto;
+  width: 80%;
+  border-radius: 0.5rem;
+  height: 2rem;
 }

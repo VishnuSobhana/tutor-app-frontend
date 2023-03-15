@@ -32,6 +32,7 @@ const Courses = () => {
         queryString += `&subject=${key}`;
       }
     }
+ // Request to Get all the Courses from the backend
 
     myApi
       .getAllCourses(queryString)
