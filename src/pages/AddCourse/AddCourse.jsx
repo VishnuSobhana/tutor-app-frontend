@@ -1,12 +1,14 @@
 import myApi from "../../service/service";
 import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router";
+
+import { useNavigate } from "react-router";
+
 
 const AddCourse = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [subject, setSubject] = useState("-1");
-  const params = useParams();
+  //const params = useParams();
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -31,6 +33,7 @@ const AddCourse = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
+        <label htmlFor="title"> Title </label>
         <input
           value={title}
           name="title"
@@ -41,6 +44,7 @@ const AddCourse = () => {
         ></input>
       </div>
       <div>
+        <label htmlFor="description"> Description </label>
         <textarea
           value={description}
           name="description"
@@ -51,12 +55,11 @@ const AddCourse = () => {
         ></textarea>
       </div>
       <div>
-        <label htmlFor="description">: </label>
         <select
           value={subject}
           name="subject"
           id="subject"
-          onChange={(event) => setCategory(event.target.value)}
+          onChange={(event) => setSubject(event.target.value)}
         >
           <option disabled value="-1">
             Select a subject
@@ -69,7 +72,7 @@ const AddCourse = () => {
           <option value="Chemistry">Chemistry</option>
           <option value="Biology">Biology</option>
         </select>
-        <button>Create a course</button>
+        <button>Create the course</button>
       </div>
     </form>
   );
