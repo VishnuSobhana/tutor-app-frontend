@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import myApi from "../../service/service";
 import { Link, useNavigate } from "react-router-dom";
+import "./Profile.css";
 
 const Profile = () => {
   const { user, authenticateUser } = useContext(AuthContext);
@@ -46,13 +47,17 @@ const Profile = () => {
     }
   };
   if (!user) {
-    return <p>Loqding</p>;
+    return <p>Loading</p>;
   }
   return (
-    <div>
-      <h1>{user.username}</h1>;<h1>{user.bio}</h1>;<h1>{user.email}</h1>;
-      <h1>{user.telephoneNumber}</h1>; ;<h1>{user.city}</h1>; ;
-      <h1>{user.isTeacher ? "Teacher" : "Student"}</h1>;
+    <div className="card Profile">
+      <h1 className="title">{user.username}</h1>
+      <h2 className="details">BIO:{user.bio}</h2>
+      <h2 className="details">EMAIL:{user.email}</h2>
+      <h2 className="details">TELEPHONE-NUMBER:{user.telephoneNumber}</h2>
+      <h2 className="details">CITY:{user.city}</h2>
+      <h2 className="details">{user.isTeacher ? "Teacher" : "Student"}</h2>
+
       {showEditForm ? (
         <>
           <button onClick={() => setEditForm(false)}>Hide</button>
@@ -120,7 +125,7 @@ const Profile = () => {
           </form>
         </>
       ) : (
-        <button onClick={() => setEditForm(true)}>Update your profile</button>
+        <button onClick={() => setEditForm(true)}>Edit Profile</button>
       )}
       <button onClick={handleDelete}>Delete profile</button>
       <Link to="/favoriteCourses">Favourite courses</Link>
