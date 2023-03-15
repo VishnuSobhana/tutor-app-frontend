@@ -33,9 +33,9 @@ const Teacher = () => {
   return (
     <>
       <div className="teacherContact">
-        <h2>Username : {teacher.username}</h2>
+        <h4>Name : {teacher.username}</h4>
         <h4>Email : {teacher.email}</h4>
-        <h4>TelephoneNumber : {teacher.telephoneNumber}</h4>
+        <h4>Phone Number : {teacher.telephoneNumber}</h4>
         {/* <Link to={`/teacher/${teacher._id}/edit`}>Edit teacher</Link> */}
         <button onClick={handleFavoriteTeacher}>Bookmark teacher</button>
       </div>

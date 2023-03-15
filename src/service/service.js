@@ -51,6 +51,10 @@ myApi.favoriteCourses = (id) => {
   return myApi.post(`/favorite-courses/${id}/add`);
 }
 
+myApi.removedCourse = (id) => {
+  return myApi.post(`/favorite-course/${id}/remove`)
+}
+
 myApi.updateCourse = (id, course) => {
   return myApi.patch(`/courses/${id}`, course);
 };

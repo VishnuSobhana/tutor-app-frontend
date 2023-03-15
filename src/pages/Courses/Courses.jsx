@@ -33,6 +33,8 @@ const Courses = () => {
             }
         }
 
+        // Request to Get all the Courses from the backend
+
         myApi
             .getAllCourses(queryString)
             .then((res) => setCourses(res.data))
@@ -52,7 +54,7 @@ const Courses = () => {
                     type="search"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search course"
+                    placeholder="Search course" className="search"
                 />
             </div>
             <fieldset>
@@ -78,7 +80,7 @@ const Courses = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="Computer_Science">Computer_Science: </label>
+                    <label htmlFor="Computer_Science">Computer Science: </label>
                     <input
                         checked={filters.Computer_Science}
                         type="checkbox"
@@ -88,7 +90,7 @@ const Courses = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="Physical_Education">Physical_Education: </label>
+                    <label htmlFor="Physical_Education">Physical Education: </label>
                     <input
                         checked={filters.Physical_Education}
                         type="checkbox"

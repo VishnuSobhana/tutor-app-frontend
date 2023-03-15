@@ -12,7 +12,7 @@ const Course = () => {
   useEffect(() => {
     myApi
       .getOneCourse(params.courseId)
-      .then((res) => setCourse(res.data.oneCourse))
+      .then((res) => setCourse(res.data))
       .catch((e) => console.error(e));
   }, []);
 
