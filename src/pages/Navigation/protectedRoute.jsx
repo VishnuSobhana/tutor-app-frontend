@@ -5,6 +5,7 @@ import { Navigate, Outlet } from "react-router-dom";
 function ProtectedRoute() {
     const { isLoading, user } = useContext(AuthContext);
 
+    console.log({ isLoading })
     if (isLoading) {
         return <p>Loading...</p>;
     }

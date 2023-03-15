@@ -12,7 +12,7 @@ const Teacher = () => {
 
   const handleFavoriteTeacher = async () => {
     try {
-      await myApi.favoriteTeachers(params.teacherId);
+      await myApi.favTeacher(params.teacherId);
       navigate("/teachers");
     } catch (error) {
       console.error(error);
