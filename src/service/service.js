@@ -20,9 +20,18 @@ myApi.getOneTeacher = (id) => {
   return myApi.get(`/teachers/${id}`);
 };
 
-myApi.favoriteTeachers = (id) => {
+myApi.favTeacher = (id) => {
   return myApi.post(`/favorite-teacher/${id}/add`);
 }
+
+myApi.getfavoriteTeacher = () => {
+  return myApi.get(`/favorite-teacher`)
+}
+
+myApi.removedTeachers = (id) => {
+  return myApi.delete(`/favorite-teacher/${id}`)
+}
+
 
 //Courses :
 myApi.interceptors.request.use((request) => {
@@ -51,8 +60,12 @@ myApi.favoriteCourses = (id) => {
   return myApi.post(`/favorite-courses/${id}/add`);
 }
 
+myApi.getfavoriteCourses = () => {
+  return myApi.get(`/favorite-courses`)
+}
+
 myApi.removedCourse = (id) => {
-  return myApi.post(`/favorite-course/${id}/remove`)
+  return myApi.delete(`/favorite-courses/${id}/remove`)
 }
 
 myApi.updateCourse = (id, course) => {

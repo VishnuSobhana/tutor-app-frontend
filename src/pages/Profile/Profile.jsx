@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import myApi from "../../service/service";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const { user, authenticateUser } = useContext(AuthContext);
@@ -123,6 +123,8 @@ const Profile = () => {
         <button onClick={() => setEditForm(true)}>Update your profile</button>
       )}
       <button onClick={handleDelete}>Delete profile</button>
+      <Link to="/favoriteCourses">Favourite courses</Link>
+      <Link to='/favoriteTeachers'>Favorite Teachers</Link>
     </div>
   );
 };
