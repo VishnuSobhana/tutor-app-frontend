@@ -33,7 +33,18 @@ const NavBar = () => {
                   <li>
                     <NavLink to="/teachers">Teachers</NavLink>
                   </li>
-                  <button onClick={handleClick}>Logout</button>
+                  {user.isTeacher ? (
+                    <>
+                      <li>
+                        <NavLink to="/course/new">Add new course</NavLink>
+                      </li>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                  <li>
+                    <button onClick={handleClick}>Logout</button>
+                  </li>
                 </>
               ) : (
                 <>
