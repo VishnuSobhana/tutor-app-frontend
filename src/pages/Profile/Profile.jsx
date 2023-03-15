@@ -17,7 +17,7 @@ const Profile = () => {
 
   const handleDelete = async (event) => {
     try {
-      await myApi.delete(`/profile/${user._id}`);
+      await myApi.delete(`/profile`);
       navigate("/");
       authenticateUser();
     } catch (error) {
