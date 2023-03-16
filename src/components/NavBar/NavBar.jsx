@@ -1,3 +1,4 @@
+import "./NavBar.css";
 import { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
@@ -12,6 +13,7 @@ const NavBar = () => {
     removeToken();
     authenticateUser();
   };
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -40,7 +42,18 @@ const NavBar = () => {
                       </li>
                     </>
                   ) : (
-                    <></>
+                    <>
+                      <li>
+                        <NavLink to="/favoriteCourses">
+                          My favourite courses
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/favoriteTeachers">
+                          My favourite teachers
+                        </NavLink>
+                      </li>
+                    </>
                   )}
                   <li>
                     <button onClick={handleClick}>Logout</button>

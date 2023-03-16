@@ -22,7 +22,7 @@ const Courses = () => {
     Biology: false,
   });
 
-  useEffect(() => {
+  function fetchCourses() {
     let queryString = "";
     if (query) {
       queryString = `course=${query}`;
@@ -32,7 +32,7 @@ const Courses = () => {
         queryString += `&subject=${key}`;
       }
     }
- // Request to Get all the Courses from the backend
+    // Request to Get all the Courses from the backend
 
     myApi
       .getAllCourses(queryString)
@@ -41,6 +41,10 @@ const Courses = () => {
         setCourses(res.data);
       })
       .catch((e) => console.error(e));
+  }
+
+  useEffect(() => {
+    fetchCourses();
   }, [query, filters]);
 
   const handleCheckBox = (event) => {
@@ -132,7 +136,11 @@ const Courses = () => {
           />
         </div>
       </fieldset>
-      <List array={courses} MyComponent={CourseCard} />
+      <List
+        fetchCourses={fetchCourses}
+        array={courses}
+        MyComponent={CourseCard}
+      />
     </div>
   );
 };
