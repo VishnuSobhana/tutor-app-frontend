@@ -1,4 +1,3 @@
-
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import myApi from "../../service/service";
@@ -53,14 +52,14 @@ const Profile = () => {
   return (
     <div className="card Profile">
       <h1 className="title">{user.username}</h1>
-      <h2 className="details">BIO:{user.bio}</h2>
-      <h2 className="details">EMAIL:{user.email}</h2>
-      <h2 className="details">TELEPHONE-NUMBER:{user.telephoneNumber}</h2>
-      <h2 className="details">CITY:{user.city}</h2>
+      <h2 className="details">Bio:{user.bio}</h2>
+      <h2 className="details">Email:{user.email}</h2>
+      <h2 className="details">TelephoneNumber:{user.telephoneNumber}</h2>
+      <h2 className="details">City:{user.city}</h2>
       <h2 className="details">{user.isTeacher ? "Teacher" : "Student"}</h2>
 
       {showEditForm ? (
-        <>
+        <div>
           <button onClick={() => setEditForm(false)}>Hide</button>
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username:</label>
@@ -124,13 +123,14 @@ const Profile = () => {
               Submit
             </button>
           </form>
-        </>
+        </div>
       ) : (
         <button onClick={() => setEditForm(true)}>Edit Profile</button>
       )}
+
       <button onClick={handleDelete}>Delete profile</button>
       <Link to="/favoriteCourses">Favourite courses</Link>
-      <Link to='/favoriteTeachers'>Favorite Teachers</Link>
+      <Link to="/favoriteTeachers">Favorite Teachers</Link>
     </div>
   );
 };
