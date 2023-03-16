@@ -129,8 +129,6 @@ const Profile = () => {
       )}
 
       <button onClick={handleDelete}>Delete profile</button>
-      <Link to="/favoriteCourses">Favourite courses</Link>
-      <Link to="/favoriteTeachers">Favorite Teachers</Link>
     </div>
   );
 };

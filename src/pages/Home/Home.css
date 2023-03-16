@@ -6,6 +6,7 @@
     align-items: center;
     text-align: center; 
     height: 100vh;
+    background-image: url(/images/background_teacher.jpg);
     /* background-color: #00008B; */
 }
 .home-links{
@@ -14,7 +15,7 @@
     width: 50vh;
     justify-content: center;
     align-content: center;
-    height: 10rem;
+    height: 15rem;
 }
 
 .home-links a{
@@ -29,4 +30,10 @@
 
 .homepage h1{
 height: 5rem;
+font-weight: 800;
+color:blue
+}
+
+a.btn-teachers a.btn-courses{
+    height: 3rem;
 }

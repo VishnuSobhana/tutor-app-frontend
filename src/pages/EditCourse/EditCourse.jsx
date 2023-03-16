@@ -3,7 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 // import axios from 'axios'
 import myApi from "../../service/service";
 import "./EditCourse.css"
-
 const EditCourse = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -11,12 +10,13 @@ const EditCourse = () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  console.log(params);
+  // console.log(params);
 
   useEffect(() => {
     myApi
       .getOneCourse(params.courseId)
       .then((res) => {
+        console.log(res.data)
         setTitle(res.data.oneCourse.title);
         setDescription(res.data.oneCourse.description);
         setSubject(res.data.oneCourse.subject);
