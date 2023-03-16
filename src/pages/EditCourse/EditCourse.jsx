@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 // import axios from 'axios'
 import myApi from "../../service/service";
+import "./EditCourse.css"
 
 const EditCourse = () => {
   const [title, setTitle] = useState("");
@@ -43,7 +44,8 @@ const EditCourse = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="editForm">
+    <form  onSubmit={handleSubmit}>
       <label htmlFor="title"> title :</label>
       <div>
         <input
@@ -88,6 +90,7 @@ const EditCourse = () => {
         <button>Update a course</button>
       </div>
     </form>
+    </div>
   );
 };
 
