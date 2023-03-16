@@ -5,7 +5,7 @@ import myApi from "../../service/service";
 import { AuthContext } from "../../context/AuthContext";
 
 const Course = () => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const [course, setCourse] = useState(null);
   const params = useParams();
   console.log(params);
@@ -39,6 +39,7 @@ const Course = () => {
   if (!course) {
     return <div className="loading">Loading...</div>;
   }
+  console.log(course);
   return (
     <>
       <h2>Title : {course.title}</h2>
@@ -46,12 +47,14 @@ const Course = () => {
       <h4>Description : </h4>
       <p style={{ whiteSpace: "pre-line" }}>{course.description}</p>
 
-      {user.isTeacher ? 
-      <>
+      {user.isTeacher ? (
+        <>
           <Link to={`/course/${course._id}/edit`}>Edit that course</Link>
           <button onClick={handleDelete}>Delete course</button>
-      </>
-         : <button onClick={handleFavorite}>Bookmark Course</button>}
+        </>
+      ) : (
+        <button onClick={handleFavorite}>Bookmark Course</button>
+      )}
     </>
   );
 };

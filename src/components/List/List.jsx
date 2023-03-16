@@ -1,11 +1,17 @@
 import React from "react";
 import Container from "./../Container/Container";
-const List = ({ array, MyComponent }) => {
+const List = ({ fetchCourses, array, MyComponent }) => {
   return (
     <>
       <Container>
         {array.map((element) => {
-          return <MyComponent key={element._id} {...element} />;
+          return (
+            <MyComponent
+              fetchCourses={fetchCourses}
+              key={element._id}
+              {...element}
+            />
+          );
         })}
       </Container>
     </>
