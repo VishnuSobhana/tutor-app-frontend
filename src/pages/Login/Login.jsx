@@ -14,7 +14,7 @@ const Login = () => {
     try {
       event.preventDefault();
       const loggedUser = { username, password };
-      const response = await myApi.post("/api/auth/login", loggedUser);
+      const response = await myApi.post("/auth/login", loggedUser);
       storeToken(response.data.token);
       await authenticateUser();
       navigate("/");

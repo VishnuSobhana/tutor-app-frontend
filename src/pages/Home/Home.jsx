@@ -6,8 +6,8 @@ const Home = () => {
         <div className="homepage">
             <h1>Welcome to the tutor App!</h1>
             <div className='home-links'>
-            <Link to="./teachers" className='btn-teachers'><a>Choose a teacher</a></Link>
-            <Link to="./courses" className='btn-courses'><a>Choose a course</a></Link>
+            <Link to="./teachers" className='btn-teachers'>Choose a teacher</Link>
+            <Link to="./courses" className='btn-courses'>Choose a course</Link>
             </div>
         </div>
     )
