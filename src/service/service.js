@@ -4,7 +4,7 @@ import axios from "axios";
 
 // Backend is running on http://localhost:5005
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5005/api";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const myApi = axios.create({
   baseURL: BACKEND_URL,
@@ -21,9 +21,7 @@ myApi.getOneTeacher = (id) => {
 };
 
 myApi.favTeacher = (id) => {
-
   return myApi.post(`/favorite-teacher/${id}/add`);
-
 };
 
 myApi.getfavoriteTeacher = () => {
@@ -42,9 +40,7 @@ myApi.interceptors.request.use((request) => {
 });
 
 myApi.createCourse = (course) => {
-
   return myApi.post("/courses/add", course);
-
 };
 
 myApi.getAllCourses = (queryString) => {
@@ -60,9 +56,7 @@ myApi.deleteCourse = (id) => {
 };
 
 myApi.favoriteCourses = (id) => {
-
   return myApi.post(`/favorite-courses/${id}/add`);
-
 };
 
 myApi.getfavoriteCourses = () => {
@@ -74,9 +68,7 @@ myApi.removedCourse = (id) => {
 };
 
 myApi.updateCourse = (id, course) => {
-
   return myApi.patch(`/courses/${id}`, course);
-
 };
 
 export default myApi;

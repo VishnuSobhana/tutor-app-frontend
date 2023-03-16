@@ -12,7 +12,8 @@
   font-size: 70px;
 }
 .details {
-  color: brown;
+  color: black;
+  margin-left: 4rem;
 }
 
 .Profile button {
@@ -32,4 +33,49 @@
 button:hover {
   opacity: 0.7;
   background-color: red;
+}
+
+.Profile form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.1rem;
+  background-color: #add8e6;
+  max-width: 450px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1em;
+  border-radius: 1rem;
+  height: 30%;
+}
+
+label {
+  display: flex;
+  text-align: center;
+  /* border: 1px solid red; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  width: 50%;
+  height: 100%;
+  color: black;
+}
+input {
+  width: 70%;
+  height: 100%;
+  /* gap:0.5rem; */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid red;
+}
+
+.Profile textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+form button {
+  color: black;
+  background: #00008b;
 }
