@@ -1,3 +1,4 @@
+
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import myApi from "../../service/service";
@@ -17,7 +18,7 @@ const Profile = () => {
 
   const handleDelete = async (event) => {
     try {
-      await myApi.delete(`/profile/${user._id}`);
+      await myApi.delete(`/profile`);
       navigate("/");
       authenticateUser();
     } catch (error) {
