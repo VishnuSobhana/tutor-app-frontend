@@ -1,6 +1,6 @@
 import myApi from "../../service/service";
 import React, { useState } from "react";
-
+import "../../pages/EditCourse/EditCourse"
 import { useNavigate } from "react-router";
 
 
@@ -31,7 +31,8 @@ const AddCourse = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="editForm">
+    <form  onSubmit={handleSubmit}>
       <div>
         <label htmlFor="title"> Title </label>
         <input
@@ -54,14 +55,14 @@ const AddCourse = () => {
           onChange={(event) => setDescription(event.target.value)}
         ></textarea>
       </div>
-      <div>
+      <div className="options">
         <select
           value={subject}
           name="subject"
           id="subject"
           onChange={(event) => setSubject(event.target.value)}
         >
-          <option disabled value="-1">
+          <option className="disabled" disabled value="-1">
             Select a subject
           </option>
           <option value="Maths">Math</option>
@@ -75,6 +76,7 @@ const AddCourse = () => {
         <button>Create the course</button>
       </div>
     </form>
+    </div>
   );
 };
 

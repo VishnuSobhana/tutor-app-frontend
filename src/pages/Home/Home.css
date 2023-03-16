@@ -1,0 +1,32 @@
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    height: 100vh;
+    /* background-color: #00008B; */
+}
+.home-links{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    justify-content: center;
+    align-content: center;
+    height: 10rem;
+}
+
+.home-links a{
+    text-align: center;
+    margin: 1rem;
+    /* border: 1px solid black; */
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: #ADD8E6;
+    font-weight: 800;
+}
+
+.homepage h1{
+height: 5rem;
+}

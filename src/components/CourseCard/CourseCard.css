@@ -4,6 +4,8 @@
   outline: 1px solid #f9f9f9;
   transition: all 200ms ease-in-out;
   border-radius: 1rem;
+  border: 1px solid black;
+  background-color: #ADD8E6;
 }
 
 input.search{
@@ -12,4 +14,23 @@ input.search{
   width: 80%;
   border-radius: 0.5rem;
   height: 2rem;
+}
+
+ .filter{
+  display: inline-block;
+  flex-direction: row;
+  /* border: 1px solid red; */
+  padding: 1rem;
+  margin: 1rem;
+  /* width: 30% */
+}
+
+.filter-label{
+display: block;
+}
+
+fieldset legend{
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
