@@ -7,7 +7,7 @@ import "./TeacherCard.css";
 const TeacherCard = ({ _id, username, bio, email, telephoneNumber, city }) => {
 
   return (
-    <div className={`TeacherCard`} key={_id}>
+    <div className='teacherCard' key={_id}>
       <h3>Name : {username}</h3>
       <h4>City : {city}</h4>
 

@@ -1,10 +1,14 @@
-.TeacherCard {
-  max-width: 20rem;
+.teacherCard {
+  max-width: 480px;
   padding: 1rem;
+  box-sizing: border-box;
   outline: 1px solid #f9f9f9;
   transition: all 200ms ease-in-out;
   border: 1px solid black;
   border-radius: 1rem;
+  display: block;
+  background-color: #ADD8E6;
+
 }
 input.search{
   display: flex;
@@ -12,6 +16,17 @@ input.search{
   width: 80%;
   border-radius: 0.5rem;
   height: 2rem;
-  
 }
+
+.teacherContact{
+  border:1px solid black;
+  text-align: center;
+  padding: 2rem;
+  width: 40%;
+  margin:0 auto;
+  border-radius: 1rem;
+  background-color: #ADD8E6;
+   
+}
+
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import myApi from "../../service/service";
+import "../../components/TeacherCard/TeacherCard.css"
 
 const Teacher = () => {
   const [teacher, setTeacher] = useState(null);

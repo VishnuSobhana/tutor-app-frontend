@@ -52,7 +52,7 @@ const Courses = () => {
   return (
     <div>
       <div>
-        <input
+        <input className="search"
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -61,9 +61,9 @@ const Courses = () => {
       </div>
       <fieldset>
         <legend>Filter by subject :</legend>
-        <div>
-          <label htmlFor="Maths">Maths: </label>
-          <input
+        <div className="filter">
+          <label className="filter-label" htmlFor="Maths">Maths: </label>
+          <input 
             checked={filters.Maths}
             onChange={handleCheckBox}
             type="checkbox"
@@ -71,8 +71,8 @@ const Courses = () => {
             id="maths"
           />
         </div>
-        <div>
-          <label htmlFor="Physics">Physics: </label>
+        <div className="filter">
+          <label className="filter-label" htmlFor="Physics">Physics: </label>
           <input
             checked={filters.Physics}
             onChange={handleCheckBox}
@@ -81,8 +81,8 @@ const Courses = () => {
             id="physics"
           />
         </div>
-        <div>
-          <label htmlFor="Computer_Science">Computer_Science: </label>
+        <div className="filter">
+          <label className="filter-label" htmlFor="Computer_Science">Computer Science: </label>
           <input
             checked={filters.Computer_Science}
             type="checkbox"
@@ -91,8 +91,8 @@ const Courses = () => {
             id="computer_science"
           />
         </div>
-        <div>
-          <label htmlFor="Physical_Education">Physical_Education: </label>
+        <div className="filter">
+          <label className="filter-label" htmlFor="Physical_Education">Physical Education: </label>
           <input
             checked={filters.Physical_Education}
             type="checkbox"
@@ -101,8 +101,8 @@ const Courses = () => {
             id="physical_education"
           />
         </div>
-        <div>
-          <label htmlFor="History">History: </label>
+        <div className="filter">
+          <label className="filter-label" htmlFor="History">History: </label>
           <input
             checked={filters.History}
             type="checkbox"
@@ -111,8 +111,8 @@ const Courses = () => {
             id="history"
           />
         </div>
-        <div>
-          <label htmlFor="Chemistry">Chemistry: </label>
+        <div className="filter">
+          <label className="filter-label" htmlFor="Chemistry">Chemistry: </label>
           <input
             checked={filters.Chemistry}
             type="checkbox"
@@ -121,8 +121,8 @@ const Courses = () => {
             id="chemistry"
           />
         </div>
-        <div>
-          <label htmlFor="Biology">Biology: </label>
+        <div className="filter">
+          <label className="filter-label" htmlFor="Biology">Biology: </label>
           <input
             checked={filters.Biology}
             type="checkbox"

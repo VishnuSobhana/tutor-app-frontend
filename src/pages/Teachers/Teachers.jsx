@@ -14,8 +14,6 @@ const Teachers = () => {
       queryString = `city=${query}`;
     }
 
-
-
     myApi
       .getAllTeachers(queryString)
       .then((res) => setTeachers(res.data))
