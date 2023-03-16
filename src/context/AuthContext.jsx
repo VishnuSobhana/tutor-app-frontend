@@ -24,9 +24,9 @@ function AuthContextWrapper(props) {
     try {
       const currentToken = getToken();
       setToken(currentToken);
-      if (!currentToken) return setUser(null);
+      // if (!currentToken) return setUser(null);
 
-      const response = await myApi.get("/auth/me", {
+      const response = await myApi.get("/api/auth/me", {
         headers: {
           Authorization: `Bearer ${currentToken}`,
         },

@@ -1,23 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 
-h1{
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
 }
 
 .form form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: aqua;
-    max-width: 450px;
-    width: 90%;
-    margin: 2rem auto;
-    padding: 1em;
-    border-radius: 1rem;
-    height: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.1rem;
+  background-color: #add8e6;
+  max-width: 450px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1em;
+  border-radius: 1rem;
+  height: 30%;
 }
+
 
 .form label{
     display: flex;
@@ -28,16 +29,16 @@ h1{
     font-weight: 800;
     width: 50%;
     height: 100%;
+
+.form input {
+  width: 70%;
+  height: 100%;
+  /* gap:0.5rem; */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid red;
 }
 
-.form input{
-    width: 70%;
-    height: 100%;
-    /* gap:0.5rem; */
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    border: 1px solid red;
-}
 
 .form textarea{
     width: 100%;
@@ -45,3 +46,11 @@ h1{
     padding: 1rem;
     border-radius: 0.5rem;
 }
+form button {
+  color: white;
+  background: #00008b;
+}
+form {
+  height: 50px;
+}
+
