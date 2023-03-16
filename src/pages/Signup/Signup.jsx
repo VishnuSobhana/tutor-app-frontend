@@ -25,7 +25,7 @@ const Signup = () => {
       password,
     };
     try {
-      const response = await myApi.post("/api/auth/signup", userToCreate);
+      const response = await myApi.post("/auth/signup", userToCreate);
       if (response.status === 201) {
         navigate("/login");
       }
