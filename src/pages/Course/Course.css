@@ -1,0 +1,32 @@
+.one-course{
+    border:1px solid black;
+    border-radius: 1rem;
+    display:block;
+    background-color: lightblue;
+    width: fit-content;
+    height: fit-content;
+    /* flex-direction: column; */
+    text-align: center;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.course-link{
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.course-link a, .course-link button{
+border: 1px solid black;
+border-radius: 0.25rem;
+}
+
+.course-link a{
+    display: flex;
+    background-color:skyblue;
+    text-align: center;
+    align-items: center;
+    color:black
+}

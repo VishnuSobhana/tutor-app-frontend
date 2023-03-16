@@ -33,7 +33,7 @@ const AddCourse = () => {
   return (
     <div className="editForm">
     <form  onSubmit={handleSubmit}>
-      <div>
+      <div className="inputDiv">
         <label htmlFor="title"> Title </label>
         <input
           value={title}
